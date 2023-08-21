@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main_container flex">
+        <form>
+        <div class="container">
+            <div class="heading flex"><h1>Calculator</h1></div>
+            <div class="input_display flex"><input type="text"
+                 readonly id="display"></div>
+            <div class="btn-box">
+                <div class="btn">
+                    <input type="text" readonly value='AC' 
+                    onclick="(display.value='')">
+                    <input type="text" readonly value='%'
+                    onclick="fun(mod.value)" id="mod">
+                    <input type="text" readonly value='CE'
+                    onclick="display.value = display.value.slice(0,display.value.length-1)" id="remove">
+                    <input type="text" readonly value='/'
+                    onclick="fun(div.value)" id="div">
+                </div>
+                <div class="btn">
+                    <input type="text" readonly value='7' 
+                    onclick="display.value+=b7.value" id="b7">
+                    <input type="text" readonly value='8'
+                    id="b8" onclick="display.value+=b8.value">
+                    <input type="text" readonly value='9' id="b9" 
+                    onclick="display.value+=b9.value">
+                    <input type="text" readonly value='*'
+                    id="mul" onclick="fun(mul.value)">
+                </div>
+                <div class="btn">
+                    <input type="text" readonly value='4' 
+                    onclick="display.value+=b4.value" id="b4">
+                    <input type="text" readonly value='5' 
+                    onclick="display.value+=b5.value" id="b5">
+                    <input type="text" readonly value='6'
+                    onclick="display.value+=b6.value" id="b6">
+                    <input type="text" readonly value='-'
+                    onclick="fun(sub.value)" id="sub">
+                </div>
+                <div class="btn">
+                    <input type="text" readonly value='1'
+                    onclick="display.value+=b1.value" id="b1">
+                    <input type="text" readonly value='2'
+                    onclick="display.value+=b2.value" id="b2">
+                    <input type="text" readonly value='3'
+                    onclick="display.value+=b3.value" id="b3">
+                    <input type="text" readonly value='+'
+                    onclick="fun(add.value)" id="add">
+                </div>
+                <div class="btn">
+                    <input type="text" readonly value='0'
+                    onclick="display.value+=b0.value" id="b0">
+                    <input type="text" readonly value='00'
+                    onclick="display.value+=b00.value" id="b00">
+                    <input type="text" readonly value='.'
+                    onclick="fun(dot.value)" id="dot">
+                    <input type="text" readonly
+                    onclick="display.value=eval(display.value)" value="=" id="equal">
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
